@@ -9,7 +9,7 @@ import {
   BlockStack,
   Text,
 } from "@shopify/polaris";
-import type { CarWithFuelType } from "./cars.types";
+import type { CarWithFuelType } from "./types";
 
 interface CarModalProps {
   isOpen: boolean;

@@ -17,10 +17,10 @@ import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
 import prisma from "../db.server";
 import { json, redirect } from "@remix-run/node";
-import type { CarWithFuelType } from "./cars.types";
-import { CarFilters } from "./cars.filters";
-import { CreateCarModal, EditCarModal, DeleteCarModal } from "./cars.modals";
-import { useCarFilters } from "./cars.hooks";
+import type { CarWithFuelType } from "../components/cars/types";
+import { CarFilters } from "../components/cars/filters";
+import { CreateCarModal, EditCarModal, DeleteCarModal } from "../components/cars/modals";
+import { useCarFilters } from "../components/cars/hooks";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await authenticate.admin(request);
