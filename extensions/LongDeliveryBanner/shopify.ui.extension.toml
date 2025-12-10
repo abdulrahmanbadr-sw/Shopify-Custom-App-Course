@@ -1,0 +1,17 @@
+# Learn more about configuring your checkout UI extension at https://shopify.dev/docs/api/checkout-ui-extensions/configuration
+
+api_version = "2025-01"
+
+[[extensions]]
+uid = "65f076b1-4f1f-8687-c472-5f73aa24c89c55cb2bf1"
+type = "ui_extension"
+name = "LongDeliveryBanner"
+handle = "long-delivery-banner"
+
+[[extensions.targeting]]
+target = "purchase.checkout.block.render"
+module = "./src/index.tsx"
+
+[[extensions.metafields]]
+namespace = "custom"
+key = "long_delivery"
